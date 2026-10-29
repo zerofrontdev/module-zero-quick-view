@@ -2,7 +2,7 @@
     "name": "zerofront/module-zero-quick-view",
     "description": "Zero for Magento Open Source: \"Quick view\" on product cards: the product in a dialog with its photo, price and stock, and Add to Cart for a product with nothing to choose.",
     "type": "magento2-module",
-    "version": "1.3.3",
+    "version": "1.3.4",
     "license": [
         "OSL-3.0",
         "AFL-3.0"

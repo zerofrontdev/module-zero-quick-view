@@ -26,6 +26,11 @@
         min-height: 2.25rem;
         margin-inline-start: auto;
         width: max-content;
+        /* A narrow photo (a phone's two-column grid) is narrower than the label: clip the label, never poke out of the card. */
+        max-width: calc(100% - 1.5rem);
+        overflow: hidden;
+        white-space: nowrap;
+        justify-content: safe center;
         padding: 0 0.75rem;
         background: color-mix(in srgb, var(--color-base-100) 92%, transparent);
         color: var(--color-base-content);
