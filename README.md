@@ -38,7 +38,9 @@ Part of [`zerofront/zero`](https://zerofront.dev), which installs the Zero theme
 
 The fragment is never cached (it carries the visitor's form key and their
 group's price) and answers only for a product the store view lists
-(enabled, on its website, visible in the catalog).
+(enabled, on its website, visible in the catalog or in search; a "Not
+Visible Individually" product is refused). A quote-only product
+(Zero_QuoteRequest) gets "Choose options", never a direct Add to Cart.
 
 ## Settings
 
@@ -48,6 +50,8 @@ Stores > Configuration > Zero > Quick View: on or off (off by default).
 
 `dev/tests/zero-e2e/tests/quick-view.spec.ts`: open, add to cart from the
 dialog, a product with options, Esc.
+
+What changed in each release: [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 

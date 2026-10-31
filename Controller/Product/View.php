@@ -26,7 +26,8 @@ use Zero\QuickView\ViewModel\QuickView;
 /**
  * quickview/product/view?id=: the product for the dialog, an HTMX fragment
  * (templates/content.phtml). Only a product this store view lists (enabled,
- * on its website, visible in the catalog); never cached, as it carries the
+ * on its website, visible in the catalog or in search, as search results
+ * offer quick view too); never cached, as it carries the
  * visitor's form key and their group's price.
  */
 class View implements PrivateFragmentActionInterface
@@ -79,7 +80,7 @@ class View implements PrivateFragmentActionInterface
         }
         $listed = (int) $product->getStatus() === Status::STATUS_ENABLED
             && in_array((int) $store->getWebsiteId(), array_map('intval', $product->getWebsiteIds()), true)
-            && in_array((int) $product->getVisibility(), $this->visibility->getVisibleInCatalogIds(), true);
+            && in_array((int) $product->getVisibility(), $this->visibility->getVisibleInSiteIds(), true);
 
         return $listed ? $product : null;
     }
